@@ -4,10 +4,9 @@
  * - Accepts an array
  * - Logs every element of the array
  ************************************/
-const logger = function (array) {
-
-};
-
+const logger = function (array) { 
+    array.forEach((el) => console.log(el));
+}; // to log every element in array i used forEach>> to do the log action to all elements similarly.. el>> whcih is expressing elements of array
 /*************************************
  * toCelsius(temperatures)
  *
@@ -20,8 +19,8 @@ const logger = function (array) {
  *   C = (F - 32) * (5/9)
  ************************************/
 const toCelsius = function (temperatures) {
-
-};
+return temperatures.map ((degree) => (degree - 32) * (5/9));
+}; // i used return and map so that map will perform that specific action which is the conversion all over the array and then it will create a new array 
 
 /**************************************
  * hottestDays(temperatures, threshhold)
@@ -32,8 +31,8 @@ const toCelsius = function (temperatures) {
  *   that exceed the threshhold
  ***************************************/
 const hottestDays = function (temperatures, threshhold) {
-
-};
+return temperatures.filter((degree) => degree > threshhold);
+}; // used filter to include the values with specific condition which is > thresholds
 
 /******************************************
  * logHottestDays(temperatures, threshhold)
@@ -50,8 +49,8 @@ const hottestDays = function (temperatures, threshhold) {
  *       all previous functions
  *******************************************/
 const logHottestDays = function (temperatures, threshhold) {
-
-};
+logger (toCelsius (hottestDays(temperatures, threshhold)));
+}; // used all the functions that i did before simple fast way or i can do it seprately as each identified function equals variable then i apply function logger
 
 // const logHottestDays = function (temperatures, threshhold) {
 //   temperatures
